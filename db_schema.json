@@ -1,0 +1,31 @@
+{
+    "customers": [
+      {"column_name": "customer_id", "data_type": "serial"},
+      {"column_name": "name", "data_type": "varchar(100)"},
+      {"column_name": "email", "data_type": "varchar(100)"},
+      {"column_name": "phone", "data_type": "varchar(15)"},
+      {"column_name": "address", "data_type": "text"}
+    ],
+    "accounts": [
+      {"column_name": "account_id", "data_type": "serial"},
+      {"column_name": "customer_id", "data_type": "int"},
+      {"column_name": "balance", "data_type": "numeric(12,2)"},
+      {"column_name": "account_type", "data_type": "varchar(50)"},
+      {"column_name": "opened_date", "data_type": "date"}
+    ],
+    "loans": [
+      {"column_name": "loan_id", "data_type": "serial"},
+      {"column_name": "customer_id", "data_type": "int"},
+      {"column_name": "loan_amount", "data_type": "numeric(12,2)"},
+      {"column_name": "pending_amount", "data_type": "numeric(12,2)"},
+      {"column_name": "status", "data_type": "varchar(30)"}
+    ],
+    "payments": [
+      {"column_name": "payment_id", "data_type": "serial"},
+      {"column_name": "loan_id", "data_type": "int"},
+      {"column_name": "payment_date", "data_type": "date"},
+      {"column_name": "payment_amount", "data_type": "numeric(12,2)"},
+      {"column_name": "method", "data_type": "varchar(30)"}
+    ]
+  }
+  

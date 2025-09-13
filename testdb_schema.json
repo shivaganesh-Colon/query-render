@@ -1,0 +1,117 @@
+{
+    "customer": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "customer_no", "data_type": "varchar(255)"},
+      {"column_name": "rep", "data_type": "bool"},
+      {"column_name": "personal_info", "data_type": "jsonb"}
+    ],
+    "customer_auth": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "user_name", "data_type": "varchar(255)"},
+      {"column_name": "customer_id", "data_type": "int8"}
+    ],
+    "customer_password": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "active", "data_type": "bool"},
+      {"column_name": "passphrase", "data_type": "varchar(255)"},
+      {"column_name": "reset_date", "data_type": "int8"},
+      {"column_name": "customer_auth_id", "data_type": "int8"}
+    ],
+    "deposit": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "amount", "data_type": "int8"},
+      {"column_name": "closed_on", "data_type": "date"},
+      {"column_name": "customer", "data_type": "jsonb"},
+      {"column_name": "deposit_no", "data_type": "varchar(255)"},
+      {"column_name": "due", "data_type": "int8"},
+      {"column_name": "interest", "data_type": "float8"},
+      {"column_name": "mode_of_deposit", "data_type": "varchar(255)"},
+      {"column_name": "outstanding", "data_type": "int8"},
+      {"column_name": "recieved_on", "data_type": "date"},
+      {"column_name": "reference_no", "data_type": "varchar(255)"},
+      {"column_name": "roi", "data_type": "int4"},
+      {"column_name": "status", "data_type": "varchar(255)"}
+    ],
+    "emi_payment": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "amount", "data_type": "int8"},
+      {"column_name": "date", "data_type": "date"},
+      {"column_name": "due_date", "data_type": "date"},
+      {"column_name": "emi", "data_type": "int8"},
+      {"column_name": "instalment", "data_type": "int4"},
+      {"column_name": "interest", "data_type": "float8"},
+      {"column_name": "loan_no", "data_type": "varchar(255)"},
+      {"column_name": "status", "data_type": "varchar(255)"},
+      {"column_name": "loan_id", "data_type": "int8"}
+    ],
+    "interest_payment": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "amount", "data_type": "int8"},
+      {"column_name": "credit_no", "data_type": "int4"},
+      {"column_name": "date", "data_type": "date"},
+      {"column_name": "deposit_no", "data_type": "varchar(255)"},
+      {"column_name": "due_date", "data_type": "date"},
+      {"column_name": "interest", "data_type": "float8"},
+      {"column_name": "status", "data_type": "varchar(255)"},
+      {"column_name": "deposit_id", "data_type": "int8"}
+    ],
+    "interest_payment_reference": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "amount", "data_type": "int8"},
+      {"column_name": "date", "data_type": "date"},
+      {"column_name": "mode_of_payment", "data_type": "varchar(255)"},
+      {"column_name": "reference_no", "data_type": "varchar(255)"},
+      {"column_name": "remarks", "data_type": "varchar(255)"},
+      {"column_name": "ip_id", "data_type": "int8"}
+    ],
+    "loan_application": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "amount", "data_type": "int8"},
+      {"column_name": "applicant", "data_type": "jsonb"},
+      {"column_name": "application_no", "data_type": "varchar(255)"},
+      {"column_name": "comments", "data_type": "varchar(255)"},
+      {"column_name": "disbursed", "data_type": "bool"},
+      {"column_name": "guarantor", "data_type": "jsonb"},
+      {"column_name": "introducer", "data_type": "jsonb"},
+      {"column_name": "payment_method", "data_type": "varchar(255)"},
+      {"column_name": "reason", "data_type": "varchar(255)"},
+      {"column_name": "received_on", "data_type": "date"},
+      {"column_name": "status", "data_type": "varchar(255)"}
+    ],
+    "payment_reference": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "amount", "data_type": "int8"},
+      {"column_name": "date", "data_type": "date"},
+      {"column_name": "mode_of_payment", "data_type": "varchar(255)"},
+      {"column_name": "reference_no", "data_type": "varchar(255)"},
+      {"column_name": "remarks", "data_type": "varchar(255)"},
+      {"column_name": "emi_id", "data_type": "int8"}
+    ],
+    "personal_loan": [
+      {"column_name": "id", "data_type": "bigserial"},
+      {"column_name": "amount", "data_type": "int8"},
+      {"column_name": "application_no", "data_type": "varchar(255)"},
+      {"column_name": "closed_on", "data_type": "date"},
+      {"column_name": "customer", "data_type": "jsonb"},
+      {"column_name": "deduction", "data_type": "int8"},
+      {"column_name": "disbursed_amount", "data_type": "int8"},
+      {"column_name": "disbursed_on", "data_type": "date"},
+      {"column_name": "due", "data_type": "int8"},
+      {"column_name": "emi", "data_type": "int8"},
+      {"column_name": "guarantor", "data_type": "jsonb"},
+      {"column_name": "interest", "data_type": "float8"},
+      {"column_name": "introducer", "data_type": "jsonb"},
+      {"column_name": "loan_no", "data_type": "varchar(255)"},
+      {"column_name": "mode_of_disposal", "data_type": "varchar(255)"},
+      {"column_name": "outstanding", "data_type": "int8"},
+      {"column_name": "overdue_charge", "data_type": "int8"},
+      {"column_name": "reference_no", "data_type": "varchar(255)"},
+      {"column_name": "refund", "data_type": "float8"},
+      {"column_name": "remaining_tenure", "data_type": "int4"},
+      {"column_name": "roi", "data_type": "int4"},
+      {"column_name": "service_charge", "data_type": "int4"},
+      {"column_name": "status", "data_type": "varchar(255)"},
+      {"column_name": "total_tenure", "data_type": "int4"}
+    ]
+  }
+  
