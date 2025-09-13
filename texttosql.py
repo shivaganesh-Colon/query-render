@@ -11,15 +11,7 @@ response = client.models.generate_content(
 
 
 
-# def connect_db():
-#     conn = psycopg2.connect(
-#         dbname="myappdb", user="shiva",
-#         password="Study@123", host="localhost", port=5432
-#     )
-#     print("Database connected successfully")
-#     return conn
 
-# print(connect_db())
 
 
 def connect_db():

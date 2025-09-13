@@ -54,9 +54,9 @@ def clean_sql_query(sql_with_backticks):
         return sql_with_backticks.strip()  # Return original if no match
 def query_postgres(sql_query):
     conn = psycopg2.connect(
-        dbname="testDb",
-        user="sindhu",
-        password="Study@123",
+        dbname="****",
+        user="*****",
+        password="8888888",
         host="localhost",
         port=5432
     )
